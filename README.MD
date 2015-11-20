@@ -1,11 +1,17 @@
 What it does:
 ===
-Colourful script which shows Arduino board in terminal
+Shows colorful Arduino board in terminal
+
+Installation:
+===
+
+Download script and make it executable
+chmod +x pinout.sh
 
 Usage:
 ===
 
-./pinout.sh [NAME]
+sh pinout.sh [NAME]
 
 where NAME is one of:
  - uno
