@@ -16,3 +16,4 @@ sh pinout.sh [NAME]
 where NAME is one of:
  - uno
  - mega
+ - nano
