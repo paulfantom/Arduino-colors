@@ -17,3 +17,6 @@ where NAME is one of:
  - uno
  - mega
  - nano
+
+===
+Arduino ASCII art is based on http://busyducks.com/ascii-art-arduinos
