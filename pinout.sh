@@ -188,8 +188,8 @@ function nano() {
 # | [ ]A7            INT0/D2[ ] |  PD2
 # | [ ]5V                GND[ ] |
 # | [ ]RST               RST[ ] |
-# | [ ]GND  5V MOSI GND  TX1[ ] |  PD0
-# | [ ]Vin  [ ] [ ] [ ]  RX1[ ] |  PD1
+# | [ ]GND  5V MOSI GND  RX1[ ] |  PD0
+# | [ ]Vin  [ ] [ ] [ ]  TX1[ ] |  PD1
 # |         [ ] [ ] [ ]         |
 # |        MISO SCK RST         |
 # +-NANO-V3---------------------+
@@ -209,8 +209,8 @@ echo -e " "$B"|"$G" [ ]"$W"A6"$G"/"$T"SDA        "$T"INT1"$G"/"$W"D3"$G"[ ]~"$B"
 echo -e " "$B"|"$G" [ ]"$W"A7            "$T"INT0"$G"/"$W"D2"$G"[ ] "$B"|  "$P"PD2"
 echo -e " "$B"|"$G" [ ]"$R"5V                "$C"GND"$G"[ ] "$B"|"
 echo -e " "$B"|"$G" [ ]"$W"RST               "$W"RST"$G"[ ] "$B"|"
-echo -e " "$B"|"$G" [ ]"$C"GND  "$R"5V "$W"MOSI "$C"GND  "$T"TX1"$G"[ ] "$B"|  "$P"PD0"
-echo -e " "$B"|"$G" [ ]"$R"Vin  "$G"[ ] [ ] [ ]  "$T"RX1"$G"[ ] "$B"|  "$P"PD1"
+echo -e " "$B"|"$G" [ ]"$C"GND  "$R"5V "$W"MOSI "$C"GND  "$T"RX1"$G"[ ] "$B"|  "$P"PD0"
+echo -e " "$B"|"$G" [ ]"$R"Vin  "$G"[ ] [ ] [ ]  "$T"TX1"$G"[ ] "$B"|  "$P"PD1"
 echo -e " "$B"|         "$G"[ ] [ ] [ ]         "$B"|"
 echo -e " "$B"|        "$W"MISO SCK RST         "$B"|"
 echo -e " "$B"+-----------------------------+"
