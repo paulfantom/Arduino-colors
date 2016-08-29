@@ -77,16 +77,16 @@ function mega(){
 #  | [ ]N/C                    SCK/13[ ]~|   B7
 #  | [ ]v.ref                 MISO/12[ ]~|   B6
 #  | [ ]RST                   MOSI/11[ ]~|   B5
-#  | [ ]3V3      +----------+      10[ ]~|   B4
-#  | [ ]5v       | ARDUINO  |       9[ ]~|   H6
-#  | [ ]GND      |   MEGA   |       8[ ]~|   H5
+#  | [ ]3V3                        10[ ]~|   B4
+#  | [ ]5v                          9[ ]~|   H6
+#  | [ ]GND                         8[ ]~|   H5
 #  | [ ]GND      +----------+            |
-#  | [ ]Vin                         7[ ]~|   H4
-#  |                                6[ ]~|   H3
-#  | [ ]A0                          5[ ]~|   E3
-#  | [ ]A1                          4[ ]~|   G5
-#  | [ ]A2                     INT5/3[ ]~|   E5
-#  | [ ]A3                     INT4/2[ ]~|   E4
+#  | [ ]Vin      |          |       7[ ]~|   H4
+#  |             | ARDUINO  |       6[ ]~|   H3
+#  | [ ]A0       |          |       5[ ]~|   E3
+#  | [ ]A1       |   MEGA   |       4[ ]~|   G5
+#  | [ ]A2       |          |  INT5/3[ ]~|   E5
+#  | [ ]A3       +----------+  INT4/2[ ]~|   E4
 #  | [ ]A4                       TX>1[ ]~|   E1
 #  | [ ]A5                       RX<0[ ]~|   E0
 #  | [ ]A6                               |
@@ -129,16 +129,16 @@ echo -e $B" |                              "$C"GND"$G"[ ] "$B"|"
 echo -e $B" | "$G"[ ]"$W"N/C                    "$T"SCK"$G"/"$W"13"$G"[ ] "$B"|   "$P"B7"
 echo -e $B" | "$G"[ ]"$Y"v.ref"$W"                 "$T"MISO"$G"/"$W"12"$G"[ ] "$B"|   "$P"B6"
 echo -e $B" | "$G"[ ]"$W"RST                   "$T"MOSI"$G"/"$W"11"$G"[ ]~"$B"|   "$P"B5"
-echo -e $B" | "$G"[ ]"$Y"3V3"$W"      +----------+      10"$G"[ ]~"$B"|   "$P"B4"
-echo -e $B" | "$G"[ ]"$R"5v"$W"       | ARDUINO  |       9"$G"[ ]~"$B"|   "$P"H6"
-echo -e $B" | "$G"[ ]"$C"GND"$W"      |   MEGA   |       8"$G"[ ] "$B"|   "$P"H5"
+echo -e $B" | "$G"[ ]"$Y"3V3"$W"                        10"$G"[ ]~"$B"|   "$P"B4"
+echo -e $B" | "$G"[ ]"$R"5v"$W"                          9"$G"[ ]~"$B"|   "$P"H6"
+echo -e $B" | "$G"[ ]"$C"GND"$W"                         8"$G"[ ] "$B"|   "$P"H5"
 echo -e $B" | "$G"[ ]"$C"GND"$W"      +----------+            "$B"|"
-echo -e $B" | "$G"[ ]"$R"Vin"$W"                         7"$G"[ ] "$B"|   "$P"H4"
-echo -e $B" | "$W"                               6"$G"[ ]~"$B"|   "$P"H3"
-echo -e $B" | "$G"[ ]"$W"A0                          5"$G"[ ]~"$B"|   "$P"E3"
-echo -e $B" | "$G"[ ]"$W"A1                          4"$G"[ ] "$B"|   "$P"G5"
-echo -e $B" | "$G"[ ]"$W"A2                     "$T"IGT0"$G"/"$W"3"$G"[ ]~"$B"|   "$P"E5"
-echo -e $B" | "$G"[ ]"$W"A3                     "$T"IGT1"$G"/"$W"2"$G"[ ] "$B"|   "$P"E4"
+echo -e $B" | "$G"[ ]"$R"Vin"$W"      |          |       7"$G"[ ] "$B"|   "$P"H4"
+echo -e $B" | "$W"            | ARDUINO  |       6"$G"[ ]~"$B"|   "$P"H3"
+echo -e $B" | "$G"[ ]"$W"A0       |          |       5"$G"[ ]~"$B"|   "$P"E3"
+echo -e $B" | "$G"[ ]"$W"A1       |   MEGA   |       4"$G"[ ] "$B"|   "$P"G5"
+echo -e $B" | "$G"[ ]"$W"A2       |          |  "$T"IGT0"$G"/"$W"3"$G"[ ]~"$B"|   "$P"E5"
+echo -e $B" | "$G"[ ]"$W"A3       +----------+  "$T"IGT1"$G"/"$W"2"$G"[ ] "$B"|   "$P"E4"
 echo -e $B" | "$G"[ ]"$W"A4"$G"/"$T"SDA                   "$T"TX>"$W"1"$G"[ ] "$B"|   "$P"E1"
 echo -e $B" | "$G"[ ]"$W"A5"$G"/"$T"SCL                   "$T"RX<"$W"0"$G"[ ] "$B"|   "$P"E0"
 echo -e $B" | "$G"[ ]"$W"A6                              "$B" |"
