@@ -175,42 +175,42 @@ function nano() {
 #             +-----+
 # +-----------| USB |-----------+
 # |           +-----+           |
-# | [ ]D13/SCK      MISO/D12[ ] |
-# | [ ]3.3V         MOSI/D11[ ]~|
-# | [ ]V.ref          SS/D10[ ]~|
-# | [ ]A0                 D9[ ]~|
-# | [ ]A1                 D8[ ] |
-# | [ ]A2                 D7[ ] |
-# | [ ]A3                 D6[ ]~|
-# | [ ]A4                 D5[ ]~|
-# | [ ]A5/SCL             D4[ ] |
-# | [ ]A6/SDA        INT1/D3[ ]~|
-# | [ ]A7            INT0/D2[ ] |
+# | [ ]D13/SCK      MISO/D12[ ] |  PB4
+# | [ ]3.3V         MOSI/D11[ ]~|   .
+# | [ ]V.ref          SS/D10[ ]~|   .
+# | [ ]A0                 D9[ ]~|   .
+# | [ ]A1                 D8[ ] |  PB0
+# | [ ]A2                 D7[ ] |  PD7
+# | [ ]A3                 D6[ ]~|   .
+# | [ ]A4                 D5[ ]~|   .
+# | [ ]A5/SCL             D4[ ] |   .
+# | [ ]A6/SDA        INT1/D3[ ]~|   .
+# | [ ]A7            INT0/D2[ ] |  PD2
 # | [ ]5V                GND[ ] |
 # | [ ]RST               RST[ ] |
-# | [ ]GND  5V MOSI GND  TX1[ ] |
-# | [ ]Vin  [ ] [ ] [ ]  RX1[ ] |
+# | [ ]GND  5V MOSI GND  TX1[ ] |  PD0
+# | [ ]Vin  [ ] [ ] [ ]  RX1[ ] |  PD1
 # |         [ ] [ ] [ ]         |
 # |        MISO SCK RST         |
 # +-NANO-V3---------------------+
 echo -e "             "$G"+-----+"
 echo -e " "$B"+-----------"$G"|"$R" USB "$G"|"$B"-----------+"
 echo -e " "$B"|           "$G"+-----+           "$B"|"
-echo -e " "$B"|"$G" [ ]"$W"D13"$G"/"$T"SCK      MISO/"$W"D12"$G"[ ] "$B"|"
-echo -e " "$B"|"$G" [ ]"$Y"3.3V         "$T"MOSI/"$W"D11"$G"[ ]~"$B"|"
-echo -e " "$B"|"$G" [ ]"$Y"V.ref          "$T"SS/"$W"D10"$G"[ ]~"$B"|"
-echo -e " "$B"|"$G" [ ]"$W"A0    "$W"+------+     "$W"D9"$G"[ ]~"$B"|"
-echo -e " "$B"|"$G" [ ]"$W"A1    "$W"| NANO |     "$W"D8"$G"[ ] "$B"|"
-echo -e " "$B"|"$G" [ ]"$W"A2    "$W"|  V3  |     "$W"D7"$G"[ ] "$B"|"
-echo -e " "$B"|"$G" [ ]"$W"A3    "$W"+------+     "$W"D6"$G"[ ]~"$B"|"
-echo -e " "$B"|"$G" [ ]"$W"A4                 "$W"D5"$G"[ ]~"$B"|"
-echo -e " "$B"|"$G" [ ]"$W"A5"$G"/"$T"SCL             "$W"D4"$G"[ ] "$B"|"
-echo -e " "$B"|"$G" [ ]"$W"A6"$G"/"$T"SDA        "$T"INT1"$G"/"$W"D3"$G"[ ]~"$B"|"
-echo -e " "$B"|"$G" [ ]"$W"A7            "$T"INT0"$G"/"$W"D2"$G"[ ] "$B"|"
+echo -e " "$B"|"$G" [ ]"$W"D13"$G"/"$T"SCK      MISO/"$W"D12"$G"[ ] "$B"|  "$P"PB4"
+echo -e " "$B"|"$G" [ ]"$Y"3.3V         "$T"MOSI/"$W"D11"$G"[ ]~"$B"|   "$P"."
+echo -e " "$B"|"$G" [ ]"$Y"V.ref          "$T"SS/"$W"D10"$G"[ ]~"$B"|   "$P"."
+echo -e " "$B"|"$G" [ ]"$W"A0    "$W"+------+     "$W"D9"$G"[ ]~"$B"|   "$P"."
+echo -e " "$B"|"$G" [ ]"$W"A1    "$W"| NANO |     "$W"D8"$G"[ ] "$B"|  "$P"PB0"
+echo -e " "$B"|"$G" [ ]"$W"A2    "$W"|  V3  |     "$W"D7"$G"[ ] "$B"|  "$P"PD7"
+echo -e " "$B"|"$G" [ ]"$W"A3    "$W"+------+     "$W"D6"$G"[ ]~"$B"|   "$P"."
+echo -e " "$B"|"$G" [ ]"$W"A4                 "$W"D5"$G"[ ]~"$B"|   "$P"."
+echo -e " "$B"|"$G" [ ]"$W"A5"$G"/"$T"SCL             "$W"D4"$G"[ ] "$B"|   "$P"."
+echo -e " "$B"|"$G" [ ]"$W"A6"$G"/"$T"SDA        "$T"INT1"$G"/"$W"D3"$G"[ ]~"$B"|   "$P"."
+echo -e " "$B"|"$G" [ ]"$W"A7            "$T"INT0"$G"/"$W"D2"$G"[ ] "$B"|  "$P"PD2"
 echo -e " "$B"|"$G" [ ]"$R"5V                "$C"GND"$G"[ ] "$B"|"
 echo -e " "$B"|"$G" [ ]"$W"RST               "$W"RST"$G"[ ] "$B"|"
-echo -e " "$B"|"$G" [ ]"$C"GND  "$R"5V "$W"MOSI "$C"GND  "$T"TX1"$G"[ ] "$B"|"
-echo -e " "$B"|"$G" [ ]"$R"Vin  "$G"[ ] [ ] [ ]  "$T"RX1"$G"[ ] "$B"|"
+echo -e " "$B"|"$G" [ ]"$C"GND  "$R"5V "$W"MOSI "$C"GND  "$T"TX1"$G"[ ] "$B"|  "$P"PD0"
+echo -e " "$B"|"$G" [ ]"$R"Vin  "$G"[ ] [ ] [ ]  "$T"RX1"$G"[ ] "$B"|  "$P"PD1"
 echo -e " "$B"|         "$G"[ ] [ ] [ ]         "$B"|"
 echo -e " "$B"|        "$W"MISO SCK RST         "$B"|"
 echo -e " "$B"+-----------------------------+"
