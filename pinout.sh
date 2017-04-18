@@ -21,16 +21,16 @@ function uno(){
 #      |                              GND[ ] |
 #      | [ ]N/C                    SCK/13[ ] | PB5
 #      | [ ]v.ref                 MISO/12[ ] |  .
-#      | [ ]RST                   MOSI/11[ ]~|  .
-#      | [ ]3V3    +---+               10[ ]~|  .
-#      | [ ]5v    -| A |-               9[ ]~|  .
+#      | [ ]RST              OC2A/MOSI/11[ ]~|  .
+#      | [ ]3V3    +---+          OC1B/10[ ]~|  .
+#      | [ ]5v    -| A |-          OC1A/9[ ]~|  .
 #      | [ ]GND   -| R |-               8[ ] | PB0
 #      | [ ]GND   -| D |-                    |
 #      | [ ]Vin   -| U |-               7[ ] | PD7
-#      |          -| I |-               6[ ]~|  .
-#  PC0 | [ ]A0    -| N |-               5[ ]~|  .
+#      |          -| I |-          OC0A/6[ ]~|  .
+#  PC0 | [ ]A0    -| N |-          OC0B/5[ ]~|  .
 #   .  | [ ]A1    -| O |-               4[ ] |  .
-#   .  | [ ]A2     +---+           INT1/3[ ]~|  .
+#   .  | [ ]A2     +---+      OC2B/INT1/3[ ]~|  .
 #   .  | [ ]A3                     INT0/2[ ] |  .
 #   .  | [ ]A4/SDA  RST SCK MISO     TX>1[ ] |  .
 #  PC5 | [ ]A5/SCL  [ ] [ ] [ ]      RX<0[ ] | PD0
@@ -47,16 +47,16 @@ echo -e  $B"     |                             "$Y"AREF"$G"[ ] "$B"|"
 echo -e  $B"     |                              "$C"GND"$G"[ ] "$B"|"
 echo -e  $B"     | "$G"[ ]"$W"N/C                    "$T"SCK"$G"/"$W"13"$G"[ ] "$B"| "$P"PB5"
 echo -e  $B"     | "$G"[ ]"$Y"v.ref"$W"                 "$T"MISO"$G"/"$W"12"$G"[ ] "$B"|  "$P"."
-echo -e  $B"     | "$G"[ ]"$W"RST                   "$T"MOSI"$G"/"$W"11"$G"[ ]~"$B"|  "$P"."
-echo -e  $B"     | "$G"[ ]"$Y"3V3"$W"    +---+               10"$G"[ ]~"$B"|  "$P"."
-echo -e  $B"     | "$G"[ ]"$R"5v"$W"    -| A |-               9"$G"[ ]~"$B"|  "$P"."
+echo -e  $B"     | "$G"[ ]"$W"RST              "$T"OC2A"$G"/"$T"MOSI"$G"/"$W"11"$G"[ ]~"$B"|  "$P"."
+echo -e  $B"     | "$G"[ ]"$Y"3V3"$W"    +---+          "$T"OC1B"$G"/"$W"10"$G"[ ]~"$B"|  "$P"."
+echo -e  $B"     | "$G"[ ]"$R"5v"$W"    -| A |-          "$T"OC1A"$G"/"$W"9"$G"[ ]~"$B"|  "$P"."
 echo -e  $B"     | "$G"[ ]"$C"GND"$W"   -| R |-               8"$G"[ ] "$B"| "$P"PB0"
 echo -e  $B"     | "$G"[ ]"$C"GND"$W"   -| D |-                    "$B"|"
 echo -e  $B"     | "$G"[ ]"$R"Vin"$W"   -| U |-               7"$G"[ ] "$B"| "$P"PD7"
-echo -e  $B"     | "$W"         -| I |-               6"$G"[ ]~"$B"|  "$P"."
-echo -e  $P" PC0 "$B"| "$G"[ ]"$W"A0    -| N |-               5"$G"[ ]~"$B"|  "$P"."
+echo -e  $B"     | "$W"         -| I |-          "$T"OC0A"$G"/"$W"6"$G"[ ]~"$B"|  "$P"."
+echo -e  $P" PC0 "$B"| "$G"[ ]"$W"A0    -| N |-          "$T"OC0B"$G"/"$W"5"$G"[ ]~"$B"|  "$P"."
 echo -e  $P"  .  "$B"| "$G"[ ]"$W"A1    -| O |-               4"$G"[ ] "$B"|  "$P"."
-echo -e  $P"  .  "$B"| "$G"[ ]"$W"A2     +---+           "$T"INT1"$G"/"$W"3"$G"[ ]~"$B"|  "$P"."
+echo -e  $P"  .  "$B"| "$G"[ ]"$W"A2     +---+      "$T"OC2B"$G"/"$T"INT1"$G"/"$W"3"$G"[ ]~"$B"|  "$P"."
 echo -e  $P"  .  "$B"| "$G"[ ]"$W"A3                     "$T"INT0"$G"/"$W"2"$G"[ ] "$B"|  "$P"."
 echo -e  $P"  .  "$B"| "$G"[ ]"$W"A4"$G"/"$T"SDA"$W"  RST SCK MISO     "$T"TX>"$W"1"$G"[ ] "$B"|  "$P"."
 echo -e  $P" PC5 "$B"| "$G"[ ]"$W"A5"$G"/"$T"SCL"$G"  [ ] [ ] [ ]      "$T"RX<"$W"0"$G"[ ] "$B"| "$P"PD0"
