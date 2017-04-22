@@ -217,9 +217,29 @@ echo -e "     "$B"+-----------------------------+"
 
 }
 
+function isp() {
+#   male (board)   female (programmer)
+#        ┌───┐╎      ┌───┐
+#  MISO  ╵▪ •│╎ VCC  │▢ ▢└┐ MISO
+#  SCK    • •│╎ MOSI │▢ ▢ │ SCK
+#  RESET ╷• •│╎ GND  │▢ ▢┌┘ RESET
+#        └───┘╎      └───┘
+#             ↑
+#     edge of Uno board
+echo -e $N"   male (board)   female (programmer)"
+echo -e $B"        ┌───┐╎      ┌───┐"
+echo -e $T"  MISO  "$B"╵"$G"▪ •"$B"│╎ "$R"VCC  "$B"│"$G"▢ ▢"$B"└┐ "$T"MISO"
+echo -e $T"  SCK    "$G"• •"$B"│╎ "$T"MOSI "$B"│"$G"▢ ▢ "$B"│ "$T"SCK"
+echo -e $W"  RESET "$B"╷"$G"• •"$B"│╎ "$C"GND  "$B"│"$G"▢ ▢"$B"┌┘ "$W"RESET"
+echo -e $B"        └───┘╎      └───┘"
+echo -e $N"             ↑"
+echo -e $N"     edge of Uno board"
+}
+
 case "$1" in
   "uno") uno ;;
   "mega") mega ;;
   "nano") nano ;;
+  "isp") isp ;;
   *) uno;;
 esac
