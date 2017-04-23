@@ -236,10 +236,28 @@ echo -e $N"             ↑"
 echo -e $N"     edge of Uno board"
 }
 
+function tiny13() {
+#         ATtiny13/13A
+#           ┌──┬┬──┐
+#     RESET ┤1 └┘ 8├ Vcc
+#  ADC3 PB3 ┤2    7├ PB2 SCK/ADC1/T0
+#  ADC2 PB4 ┤3    6├ PB1 MISO/AIN1/OC0B/INT0
+#       GND ┤4    5│ PB0 MOSI/AIN0/OC0A
+#           └──────┘
+echo -e $N"         ATtiny13/13A"
+echo -e $B"           ┌──┬┬──┐"
+echo -e $W"     RESET "$B"┤"$G"1 "$B"└┘ "$G"8"$B"├ "$R"Vcc"
+echo -e $T"  ADC3 "$P"PB3 "$B"┤"$G"2    7"$B"├ "$P"PB2 "$T"SCK"$G"/"$T"ADC1"$G"/"$T"T0"
+echo -e $T"  ADC2 "$P"PB4 "$B"┤"$G"3    6"$B"├ "$P"PB1 "$T"MISO"$G"/"$T"AIN1"$G"/"$T"OC0B"$G"/"$T"INT0"
+echo -e $C"       GND "$B"┤"$G"4    5"$B"├ "$P"PB0 "$T"MOSI"$G"/"$T"AIN0"$G"/"$T"OC0A"
+echo -e $B"           └──────┘"
+}
+
 case "$1" in
   "uno") uno ;;
   "mega") mega ;;
   "nano") nano ;;
   "isp") isp ;;
+  "t13"|"t13a"|"tiny13"|"tiny13a") tiny13 ;;
   *) uno;;
 esac
