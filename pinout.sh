@@ -257,11 +257,20 @@ function usage() {
   echo "Usage: $0 {uno|mega|nano|isp|t[iny]13[a]}..."
 }
 
-case "$1" in
-  "uno") uno ;;
-  "mega") mega ;;
-  "nano") nano ;;
-  "isp") isp ;;
-  "t13"|"t13a"|"tiny13"|"tiny13a") tiny13 ;;
-  *) usage ;;
-esac
+# At least one argument should be provided
+if [ $# == 0 ]; then
+   usage
+   exit
+fi
+
+while [ -n "$1" ]; do
+  case "$1" in
+    "uno") uno ;;
+    "mega") mega ;;
+    "nano") nano ;;
+    "isp") isp ;;
+    "t13"|"t13a"|"tiny13"|"tiny13a") tiny13 ;;
+    *) usage; exit ;;
+  esac
+  shift
+done
