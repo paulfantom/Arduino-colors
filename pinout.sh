@@ -253,11 +253,15 @@ echo -e $C"       GND "$B"┤"$G"4    5"$B"├ "$P"PB0 "$T"MOSI"$G"/"$T"AIN0"$G"
 echo -e $B"           └──────┘"
 }
 
+function usage() {
+  echo "Usage: $0 {uno|mega|nano|isp|t[iny]13[a]}..."
+}
+
 case "$1" in
   "uno") uno ;;
   "mega") mega ;;
   "nano") nano ;;
   "isp") isp ;;
   "t13"|"t13a"|"tiny13"|"tiny13a") tiny13 ;;
-  *) uno;;
+  *) usage ;;
 esac
