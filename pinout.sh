@@ -62,7 +62,7 @@ echo -e  $P"  .  "$B"| "$G"[ ]"$W"A4"$G"/"$T"SDA"$W"  RST SCK MISO     "$T"TX>"$
 echo -e  $P" PC5 "$B"| "$G"[ ]"$W"A5"$G"/"$T"SCL"$G"  [ ] [ ] [ ]      "$T"RX<"$W"0"$G"[ ] "$B"| "$P"PD0"
 echo -e  $B"     |            "$G"[ ] [ ] [ ]"$G"              "$B"|"
 echo -e  $B"     |  "$W"UNO_R3    "$C"GND "$W"MOSI "$R"5V"$B"  ____________/"
-echo -e  $B"      \_______________________/"
+echo -e  $B"      \_______________________/"$N
 }
 
 function mega(){
@@ -168,7 +168,7 @@ echo -e $B"     | "$C"N"$W" 3 1 9 7 5 3 1 9 7 5 3 1 9 7 5 3 "$R"V "$B"| "$W"46"$
 echo -e $B"     | "$C"D                                   "$B"| "$W"48"$G"="$P"PL1  "$W"49"$G"="$P"PL0  "$W"SPI:"
 echo -e $B"     |                                     | "$W"50"$G"="$P"PB3  "$W"51"$G"="$P"PB2  "$W"50"$G"="$P"MISO "$W"51"$G"="$P"MOSI"
 echo -e $B"     |     "$W"2560"$B"                ____________/ "$W"52"$G"="$P"PB1  "$W"53"$G"="$P"PB0  "$W"52"$G"="$P"SCK  "$W"53"$G"="$P"SS"
-echo -e $B"      \_______________________/"
+echo -e $B"      \_______________________/"$N
 }
 
 function nano() {
@@ -213,7 +213,7 @@ echo -e "     "$B"|"$G" [ ]"$C"GND  "$R"5V "$W"MOSI "$C"GND  "$T"RX1"$G"[ ] "$B"
 echo -e "     "$B"|"$G" [ ]"$R"Vin  "$G"[ ] [ ] [ ]  "$T"TX1"$G"[ ] "$B"|  "$P"PD1"
 echo -e "     "$B"|         "$G"[ ] [ ] [ ]         "$B"|"
 echo -e "     "$B"|        "$W"MISO SCK RST         "$B"|"
-echo -e "     "$B"+-----------------------------+"
+echo -e "     "$B"+-----------------------------+"$N
 
 }
 
@@ -250,7 +250,7 @@ echo -e $W"     RESET "$B"┤"$G"1 "$B"└┘ "$G"8"$B"├ "$R"Vcc"
 echo -e $T"  ADC3 "$P"PB3 "$B"┤"$G"2    7"$B"├ "$P"PB2 "$T"SCK"$G"/"$T"ADC1"$G"/"$T"T0"
 echo -e $T"  ADC2 "$P"PB4 "$B"┤"$G"3    6"$B"├ "$P"PB1 "$T"MISO"$G"/"$T"AIN1"$G"/"$T"OC0B"$G"/"$T"INT0"
 echo -e $C"       GND "$B"┤"$G"4    5"$B"├ "$P"PB0 "$T"MOSI"$G"/"$T"AIN0"$G"/"$T"OC0A"
-echo -e $B"           └──────┘"
+echo -e $B"           └──────┘"$N
 }
 
 function usage() {
