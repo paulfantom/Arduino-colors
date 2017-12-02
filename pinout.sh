@@ -21,16 +21,16 @@ function uno(){
 #      |                              GND[ ] |
 #      | [ ]N/C                    SCK/13[ ] | PB5
 #      | [ ]v.ref                 MISO/12[ ] |  .
-#      | [ ]RST                   MOSI/11[ ]~|  .
-#      | [ ]3V3    +---+               10[ ]~|  .
-#      | [ ]5v    -| A |-               9[ ]~|  .
+#      | [ ]RST              OC2A/MOSI/11[ ]~|  .
+#      | [ ]3V3    +---+          OC1B/10[ ]~|  .
+#      | [ ]5v    -| A |-          OC1A/9[ ]~|  .
 #      | [ ]GND   -| R |-               8[ ] | PB0
 #      | [ ]GND   -| D |-                    |
 #      | [ ]Vin   -| U |-               7[ ] | PD7
-#      |          -| I |-               6[ ]~|  .
-#  PC0 | [ ]A0    -| N |-               5[ ]~|  .
+#      |          -| I |-          OC0A/6[ ]~|  .
+#  PC0 | [ ]A0    -| N |-          OC0B/5[ ]~|  .
 #   .  | [ ]A1    -| O |-               4[ ] |  .
-#   .  | [ ]A2     +---+           INT1/3[ ]~|  .
+#   .  | [ ]A2     +---+      OC2B/INT1/3[ ]~|  .
 #   .  | [ ]A3                     INT0/2[ ] |  .
 #   .  | [ ]A4/SDA  RST SCK MISO     TX>1[ ] |  .
 #  PC5 | [ ]A5/SCL  [ ] [ ] [ ]      RX<0[ ] | PD0
@@ -47,22 +47,22 @@ echo -e  $B"     |                             "$Y"AREF"$G"[ ] "$B"|"
 echo -e  $B"     |                              "$C"GND"$G"[ ] "$B"|"
 echo -e  $B"     | "$G"[ ]"$W"N/C                    "$T"SCK"$G"/"$W"13"$G"[ ] "$B"| "$P"PB5"
 echo -e  $B"     | "$G"[ ]"$Y"v.ref"$W"                 "$T"MISO"$G"/"$W"12"$G"[ ] "$B"|  "$P"."
-echo -e  $B"     | "$G"[ ]"$W"RST                   "$T"MOSI"$G"/"$W"11"$G"[ ]~"$B"|  "$P"."
-echo -e  $B"     | "$G"[ ]"$Y"3V3"$W"    +---+               10"$G"[ ]~"$B"|  "$P"."
-echo -e  $B"     | "$G"[ ]"$R"5v"$W"    -| A |-               9"$G"[ ]~"$B"|  "$P"."
+echo -e  $B"     | "$G"[ ]"$W"RST              "$T"OC2A"$G"/"$T"MOSI"$G"/"$W"11"$G"[ ]~"$B"|  "$P"."
+echo -e  $B"     | "$G"[ ]"$Y"3V3"$W"    +---+          "$T"OC1B"$G"/"$W"10"$G"[ ]~"$B"|  "$P"."
+echo -e  $B"     | "$G"[ ]"$R"5v"$W"    -| A |-          "$T"OC1A"$G"/"$W"9"$G"[ ]~"$B"|  "$P"."
 echo -e  $B"     | "$G"[ ]"$C"GND"$W"   -| R |-               8"$G"[ ] "$B"| "$P"PB0"
 echo -e  $B"     | "$G"[ ]"$C"GND"$W"   -| D |-                    "$B"|"
 echo -e  $B"     | "$G"[ ]"$R"Vin"$W"   -| U |-               7"$G"[ ] "$B"| "$P"PD7"
-echo -e  $B"     | "$W"         -| I |-               6"$G"[ ]~"$B"|  "$P"."
-echo -e  $P" PC0 "$B"| "$G"[ ]"$W"A0    -| N |-               5"$G"[ ]~"$B"|  "$P"."
+echo -e  $B"     | "$W"         -| I |-          "$T"OC0A"$G"/"$W"6"$G"[ ]~"$B"|  "$P"."
+echo -e  $P" PC0 "$B"| "$G"[ ]"$W"A0    -| N |-          "$T"OC0B"$G"/"$W"5"$G"[ ]~"$B"|  "$P"."
 echo -e  $P"  .  "$B"| "$G"[ ]"$W"A1    -| O |-               4"$G"[ ] "$B"|  "$P"."
-echo -e  $P"  .  "$B"| "$G"[ ]"$W"A2     +---+           "$T"INT1"$G"/"$W"3"$G"[ ]~"$B"|  "$P"."
+echo -e  $P"  .  "$B"| "$G"[ ]"$W"A2     +---+      "$T"OC2B"$G"/"$T"INT1"$G"/"$W"3"$G"[ ]~"$B"|  "$P"."
 echo -e  $P"  .  "$B"| "$G"[ ]"$W"A3                     "$T"INT0"$G"/"$W"2"$G"[ ] "$B"|  "$P"."
 echo -e  $P"  .  "$B"| "$G"[ ]"$W"A4"$G"/"$T"SDA"$W"  RST SCK MISO     "$T"TX>"$W"1"$G"[ ] "$B"|  "$P"."
 echo -e  $P" PC5 "$B"| "$G"[ ]"$W"A5"$G"/"$T"SCL"$G"  [ ] [ ] [ ]      "$T"RX<"$W"0"$G"[ ] "$B"| "$P"PD0"
 echo -e  $B"     |            "$G"[ ] [ ] [ ]"$G"              "$B"|"
 echo -e  $B"     |  "$W"UNO_R3    "$C"GND "$W"MOSI "$R"5V"$B"  ____________/"
-echo -e  $B"      \_______________________/"
+echo -e  $B"      \_______________________/"$N
 }
 
 function mega(){
@@ -168,7 +168,7 @@ echo -e $B"     | "$C"N"$W" 3 1 9 7 5 3 1 9 7 5 3 1 9 7 5 3 "$R"V "$B"| "$W"46"$
 echo -e $B"     | "$C"D                                   "$B"| "$W"48"$G"="$P"PL1  "$W"49"$G"="$P"PL0  "$W"SPI:"
 echo -e $B"     |                                     | "$W"50"$G"="$P"PB3  "$W"51"$G"="$P"PB2  "$W"50"$G"="$P"MISO "$W"51"$G"="$P"MOSI"
 echo -e $B"     |     "$W"2560"$B"                ____________/ "$W"52"$G"="$P"PB1  "$W"53"$G"="$P"PB0  "$W"52"$G"="$P"SCK  "$W"53"$G"="$P"SS"
-echo -e $B"      \_______________________/"
+echo -e $B"      \_______________________/"$N
 }
 
 function nano() {
@@ -213,13 +213,64 @@ echo -e "     "$B"|"$G" [ ]"$C"GND  "$R"5V "$W"MOSI "$C"GND  "$T"RX1"$G"[ ] "$B"
 echo -e "     "$B"|"$G" [ ]"$R"Vin  "$G"[ ] [ ] [ ]  "$T"TX1"$G"[ ] "$B"|  "$P"PD1"
 echo -e "     "$B"|         "$G"[ ] [ ] [ ]         "$B"|"
 echo -e "     "$B"|        "$W"MISO SCK RST         "$B"|"
-echo -e "     "$B"+-----------------------------+"
+echo -e "     "$B"+-----------------------------+"$N
 
 }
 
-case "$1" in
-  "uno") uno ;;
-  "mega") mega ;;
-  "nano") nano ;;
-  *) uno;;
-esac
+function isp() {
+#   male (board)   female (programmer)
+#        ┌───┐╎      ┌───┐
+#  MISO  ╵▪ •│╎ VCC  │▢ ▢└┐ MISO
+#  SCK    • •│╎ MOSI │▢ ▢ │ SCK
+#  RESET ╷• •│╎ GND  │▢ ▢┌┘ RESET
+#        └───┘╎      └───┘
+#             ↑
+#     edge of Uno board
+echo -e $N"   male (board)   female (programmer)"
+echo -e $B"        ┌───┐╎      ┌───┐"
+echo -e $T"  MISO  "$B"╵"$G"▪ •"$B"│╎ "$R"VCC  "$B"│"$G"▢ ▢"$B"└┐ "$T"MISO"
+echo -e $T"  SCK    "$G"• •"$B"│╎ "$T"MOSI "$B"│"$G"▢ ▢ "$B"│ "$T"SCK"
+echo -e $W"  RESET "$B"╷"$G"• •"$B"│╎ "$C"GND  "$B"│"$G"▢ ▢"$B"┌┘ "$W"RESET"
+echo -e $B"        └───┘╎      └───┘"
+echo -e $N"             ↑"
+echo -e $N"     edge of Uno board"
+}
+
+function tiny13() {
+#         ATtiny13/13A
+#           ┌──┬┬──┐
+#     RESET ┤1 └┘ 8├ Vcc
+#  ADC3 PB3 ┤2    7├ PB2 SCK/ADC1/T0
+#  ADC2 PB4 ┤3    6├ PB1 MISO/AIN1/OC0B/INT0
+#       GND ┤4    5│ PB0 MOSI/AIN0/OC0A
+#           └──────┘
+echo -e $N"         ATtiny13/13A"
+echo -e $B"           ┌──┬┬──┐"
+echo -e $W"     RESET "$B"┤"$G"1 "$B"└┘ "$G"8"$B"├ "$R"Vcc"
+echo -e $T"  ADC3 "$P"PB3 "$B"┤"$G"2    7"$B"├ "$P"PB2 "$T"SCK"$G"/"$T"ADC1"$G"/"$T"T0"
+echo -e $T"  ADC2 "$P"PB4 "$B"┤"$G"3    6"$B"├ "$P"PB1 "$T"MISO"$G"/"$T"AIN1"$G"/"$T"OC0B"$G"/"$T"INT0"
+echo -e $C"       GND "$B"┤"$G"4    5"$B"├ "$P"PB0 "$T"MOSI"$G"/"$T"AIN0"$G"/"$T"OC0A"
+echo -e $B"           └──────┘"$N
+}
+
+function usage() {
+  echo "Usage: $0 {uno|mega|nano|isp|t[iny]13[a]}..."
+}
+
+# At least one argument should be provided
+if [ $# == 0 ]; then
+   usage
+   exit
+fi
+
+while [ -n "$1" ]; do
+  case "$1" in
+    "uno") uno ;;
+    "mega") mega ;;
+    "nano") nano ;;
+    "isp") isp ;;
+    "t13"|"t13a"|"tiny13"|"tiny13a") tiny13 ;;
+    *) usage; exit ;;
+  esac
+  shift
+done
