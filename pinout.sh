@@ -294,7 +294,7 @@ echo -e $B"                         └──────┘"$N
 }
 
 function usage() {
-  echo "Usage: $0 {uno|mega|nano|isp|t[iny]13[a]|t[iny]{2,4,8}5|t[iny]{2,4,8}4}..."
+  echo "Usage: $0 {uno|mega|nano|isp|t13|t{2,4,8}5|t{2,4,8}4}..."
 }
 
 # At least one argument should be provided
