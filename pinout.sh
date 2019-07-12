@@ -253,8 +253,25 @@ echo -e $C"       GND "$B"┤"$G"4    5"$B"├ "$P"PB0 "$T"MOSI"$G"/"$T"AIN0"$G"
 echo -e $B"           └──────┘"$N
 }
 
+function tinyx5() {
+#             ATtiny25/45/85
+#                ┌──┬┬──┐
+#          RESET ┤1 └┘ 8├ Vcc
+#  O̅C̅1̅B̅/ADC3 PB3 ┤2    7├ PB2 SCK/SCL/ADC1/T0/INT0
+#  OC1B/ADC2 PB4 ┤3    6├ PB1 MISO/AIN1/OC0B/OC1A
+#            GND ┤4    5├ PB0 MOSI/SDA/AIN0/OC0A/O̅C̅1̅A̅
+#                └──────┘
+echo -e $N"             ATtiny25/45/85"
+echo -e $B"                ┌──┬┬──┐"
+echo -e $W"          RESET "$B"┤"$G"1 "$B"└┘ "$G"8"$B"├ "$R"Vcc"
+echo -e $T"  O̅C̅1̅B̅"$G"/"$T"ADC3 "$P"PB3 "$B"┤"$G"2    7"$B"├ "$P"PB2 "$T"SCK"$G"/"$T"SCL"$G"/"$T"ADC1"$G"/"$T"T0"$G"/"$T"INT0"
+echo -e $T"  OC1B"$G"/"$T"ADC2 "$P"PB4 "$B"┤"$G"3    6"$B"├ "$P"PB1 "$T"MISO"$G"/"$T"AIN1"$G"/"$T"OC0B"$G"/"$T"OC1A"
+echo -e $C"            GND "$B"┤"$G"4    5"$B"├ "$P"PB0 "$T"MOSI"$G"/"$T"SDA"$G"/"$T"AIN0"$G"/"$T"OC0A"$G"/"$T"O̅C̅1̅A̅"
+echo -e $B"                └──────┘"$N
+}
+
 function usage() {
-  echo "Usage: $0 {uno|mega|nano|isp|t[iny]13[a]}..."
+  echo "Usage: $0 {uno|mega|nano|isp|t[iny]13[a]|t[iny]{2,4,8}5}..."
 }
 
 # At least one argument should be provided
@@ -270,6 +287,7 @@ while [ -n "$1" ]; do
     "nano") nano ;;
     "isp") isp ;;
     "t13"|"t13a"|"tiny13"|"tiny13a") tiny13 ;;
+    t[248]5|tiny[248]5) tinyx5 ;;
     *) usage; exit ;;
   esac
   shift
