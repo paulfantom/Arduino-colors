@@ -270,8 +270,31 @@ echo -e $C"            GND "$B"┤"$G"4    5"$B"├ "$P"PB0 "$T"MOSI"$G"/"$T"SDA
 echo -e $B"                └──────┘"$N
 }
 
+function tinyx4() {
+#                     ATtiny24/44/84(A)
+#                         ┌──┬┬──┐
+#                     Vcc ┤1 └┘14├ GND
+#                     PB0 ┤2   13├ PA0 ADC0
+#                     PB1 ┤3   12├ PA1 ADC1/AIN0
+#                   RESET ┤4   11├ PA2 ADC2/AIN1
+#           INT0/OC0A PB2 ┤5   10├ PA3 ADC3/T0
+#      ICP1/OC0B/ADC7 PA7 ┤6    9├ PA4 SCK/SCL/ADC4/T1
+#  OC1A/ADC6/SDA/MOSI PA6 ┤7    8├ PA5 MISO/ADC5/OC1B
+#                         └──────┘
+echo -e $N"                     ATtiny24/44/84(A)"
+echo -e $B"                         ┌──┬┬──┐"
+echo -e $R"                     Vcc "$B"┤"$G"1 "$B"└┘"$G"14"$B"├ "$C"GND"
+echo -e $P"                     PB0 "$B"┤"$G"2   13"$B"├ "$P"PA0 "$T"ADC0"
+echo -e $P"                     PB1 "$B"┤"$G"3   12"$B"├ "$P"PA1 "$T"ADC1"$G"/"$T"AIN0"
+echo -e $W"                   RESET "$B"┤"$G"4   11"$B"├ "$P"PA2 "$T"ADC2"$G"/"$T"AIN1"
+echo -e $T"           INT0"$G"/"$T"OC0A "$P"PB2 "$B"┤"$G"5   10"$B"├ "$P"PA3 "$T"ADC3"$G"/"$T"T0"
+echo -e $T"      ICP1"$G"/"$T"OC0B"$G"/"$T"ADC7 "$P"PA7 "$B"┤"$G"6    9"$B"├ "$P"PA4 "$T"SCK"$G"/"$T"SCL"$G"/"$T"ADC4"$G"/"$T"T1"
+echo -e $T"  OC1A"$G"/"$T"ADC6"$G"/"$T"SDA"$G"/"$T"MOSI "$P"PA6 "$B"┤"$G"7    8"$B"├ "$P"PA5 "$T"MISO"$G"/"$T"ADC5"$G"/"$T"OC1B"
+echo -e $B"                         └──────┘"$N
+}
+
 function usage() {
-  echo "Usage: $0 {uno|mega|nano|isp|t[iny]13[a]|t[iny]{2,4,8}5}..."
+  echo "Usage: $0 {uno|mega|nano|isp|t[iny]13[a]|t[iny]{2,4,8}5|t[iny]{2,4,8}4}..."
 }
 
 # At least one argument should be provided
@@ -288,6 +311,7 @@ while [ -n "$1" ]; do
     "isp") isp ;;
     "t13"|"t13a"|"tiny13"|"tiny13a") tiny13 ;;
     t[248]5|tiny[248]5) tinyx5 ;;
+    t[248]4|tiny[248]4|t[248]4a|tiny[248]4a) tinyx4 ;;
     *) usage; exit ;;
   esac
   shift
