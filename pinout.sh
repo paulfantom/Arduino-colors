@@ -61,7 +61,7 @@ echo -e  $P"  .  "$B"| "$G"[ ]"$W"A3                     "$T"INT0"$G"/"$W"2"$G"[
 echo -e  $P"  .  "$B"| "$G"[ ]"$W"A4"$G"/"$T"SDA"$W"  RST SCK MISO     "$T"TX>"$W"1"$G"[ ] "$B"|  "$P"."
 echo -e  $P" PC5 "$B"| "$G"[ ]"$W"A5"$G"/"$T"SCL"$G"  [ ] [ ] [ ]      "$T"RX<"$W"0"$G"[ ] "$B"| "$P"PD0"
 echo -e  $B"     |            "$G"[ ] [ ] [ ]"$G"              "$B"|"
-echo -e  $B"     |  "$W"UNO_R3    "$C"GND "$W"MOSI "$R"5V"$B"  ____________/"
+echo -e  $B"     |  "$W"UNO_R3    "$C"GND "$W"MOSI "$R"5V"$B"  ____________/ "
 echo -e  $B"      \_______________________/"$N
 }
 
