@@ -182,13 +182,13 @@ function nano() {
 #  .  | [ ]A1                 D8[ ] |  PB0
 #  .  | [ ]A2                 D7[ ] |  PD7
 #  .  | [ ]A3                 D6[ ]~|   .
-#  .  | [ ]A4                 D5[ ]~|   .
+#  .  | [ ]A4/SDA             D5[ ]~|   .
 # PC5 | [ ]A5/SCL             D4[ ] |   .
-#     | [ ]A6/SDA        INT1/D3[ ]~|   .
+#     | [ ]A6            INT1/D3[ ]~|   .
 #     | [ ]A7            INT0/D2[ ] |  PD2
 #     | [ ]5V                GND[ ] |
 #     | [ ]RST               RST[ ] |
-#     | [ ]GND  5V MOSI GND  RX1[ ] |  PD0
+#     | [ ]GND  5V MOSI GND  RX0[ ] |  PD0
 #     | [ ]Vin  [ ] [ ] [ ]  TX1[ ] |  PD1
 #     |         [ ] [ ] [ ]         |
 #     |        MISO SCK RST         |
@@ -203,13 +203,13 @@ echo -e " "$P"PC0 "$B"|"$G" [ ]"$W"A0    "$W"+------+     "$W"D9"$G"[ ]~"$B"|   
 echo -e "  "$P".  "$B"|"$G" [ ]"$W"A1    "$W"| NANO |     "$W"D8"$G"[ ] "$B"|  "$P"PB0"
 echo -e "  "$P".  "$B"|"$G" [ ]"$W"A2    "$W"|  V3  |     "$W"D7"$G"[ ] "$B"|  "$P"PD7"
 echo -e "  "$P".  "$B"|"$G" [ ]"$W"A3    "$W"+------+     "$W"D6"$G"[ ]~"$B"|   "$P"."
-echo -e "  "$P".  "$B"|"$G" [ ]"$W"A4                 "$W"D5"$G"[ ]~"$B"|   "$P"."
+echo -e "  "$P".  "$B"|"$G" [ ]"$W"A4"$G"/"$T"SDA             "$W"D5"$G"[ ]~"$B"|   "$P"."
 echo -e " "$P"PC5 "$B"|"$G" [ ]"$W"A5"$G"/"$T"SCL             "$W"D4"$G"[ ] "$B"|   "$P"."
-echo -e "     "$B"|"$G" [ ]"$W"A6"$G"/"$T"SDA        "$T"INT1"$G"/"$W"D3"$G"[ ]~"$B"|   "$P"."
+echo -e "     "$B"|"$G" [ ]"$W"A6            "$T"INT1"$G"/"$W"D3"$G"[ ]~"$B"|   "$P"."
 echo -e "     "$B"|"$G" [ ]"$W"A7            "$T"INT0"$G"/"$W"D2"$G"[ ] "$B"|  "$P"PD2"
 echo -e "     "$B"|"$G" [ ]"$R"5V                "$C"GND"$G"[ ] "$B"|"
 echo -e "     "$B"|"$G" [ ]"$W"RST               "$W"RST"$G"[ ] "$B"|"
-echo -e "     "$B"|"$G" [ ]"$C"GND  "$R"5V "$W"MOSI "$C"GND  "$T"RX1"$G"[ ] "$B"|  "$P"PD0"
+echo -e "     "$B"|"$G" [ ]"$C"GND  "$R"5V "$W"MOSI "$C"GND  "$T"RX0"$G"[ ] "$B"|  "$P"PD0"
 echo -e "     "$B"|"$G" [ ]"$R"Vin  "$G"[ ] [ ] [ ]  "$T"TX1"$G"[ ] "$B"|  "$P"PD1"
 echo -e "     "$B"|         "$G"[ ] [ ] [ ]         "$B"|"
 echo -e "     "$B"|        "$W"MISO SCK RST         "$B"|"
